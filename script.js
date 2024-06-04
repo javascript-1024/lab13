@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 	function loadEpisode(episode) {
-		const lastWatchedTimeKey = `lastWatchedTime_episode${episode}`;
-		const lastWatchedTime = localStorage.getItem(lastWatchedTimeKey);
-
 		let videoUrl = videoLinks[episode];
 
 		iframe.src = videoUrl;
@@ -61,15 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	const currentEpisode = localStorage.getItem("currentEpisode") || 1;
 	episodeSelect.value = currentEpisode;
 	loadEpisode(currentEpisode);
-
-	setInterval(function () {
-		const selectedEpisode = episodeSelect.value;
-		const lastWatchedTimeKey = `lastWatchedTime_episode${selectedEpisode}`;
-		const lastWatchedTime = localStorage.getItem(lastWatchedTimeKey);
-		if (lastWatchedTime) {
-			lastTimeDisplay.textContent = Math.floor(lastWatchedTime);
-		} else {
-			lastTimeDisplay.textContent = "0";
-		}
-	}, 1000); // Cập nhật mỗi giây
 });
