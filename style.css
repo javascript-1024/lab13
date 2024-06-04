@@ -1,17 +1,21 @@
-.bg-img1 {
-	background-color: #000;
-	background-size: cover;
-	background-image: url(/img/bg1.jpg);
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.bg-img2 {
-	background-color: #000;
-	background-size: cover;
-	background-image: url(/img/bg2.jpg);
+.container {
+    text-align: center;
 }
 
-.bg-img3 {
-	background-color: #000;
-	background-size: cover;
-	background-image: url(/img/bg3.jpg);
+video {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+p {
+    margin-top: 10px;
 }
