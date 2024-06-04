@@ -9,10 +9,7 @@
 <body>
     <div class="container">
         <h1>Video Player</h1>
-        <video id="videoPlayer" width="600" controls>
-            <source src="https://embed2.streamc.xyz/embed.php?hash=22e22ded4ce034fdf6797684339d3ab8" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe id="videoPlayer" width="600" height="400" src="https://embed2.streamc.xyz/embed.php?hash=22e22ded4ce034fdf6797684339d3ab8" frameborder="0" allowfullscreen></iframe>
         <p id="status">Last watched: <span id="lastTime">0</span> seconds</p>
     </div>
     <script src="script.js"></script>
