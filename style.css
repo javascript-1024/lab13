@@ -1,27 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	background-color: #121212;
+	color: #ffffff;
+	margin: 0;
 }
 
 .container {
-    text-align: center;
+	text-align: center;
+	background-color: #1e1e1e;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 iframe {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+	border: 1px solid #333;
+	border-radius: 8px;
+	width: 100%;
+	max-width: 800px;
+	height: 450px;
+	margin-top: 20px;
 }
 
 p {
-    margin-top: 10px;
+	margin-top: 10px;
+	color: #b3b3b3;
 }
 
 .episodes {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+select {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #333;
+	color: #fff;
+}
+
+option {
+	background-color: #333;
+	color: #fff;
+}
+
+button {
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+button:hover {
+	background-color: #555;
 }
