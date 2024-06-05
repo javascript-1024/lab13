@@ -27,13 +27,12 @@ iframe {
 	margin-top: 20px;
 }
 
-p {
-	margin-top: 10px;
-	color: #b3b3b3;
+.episodes {
+	margin-bottom: 20px;
 }
 
-.episodes {
-	margin-bottom: 10px;
+label {
+	margin-right: 10px;
 }
 
 select {
@@ -42,6 +41,7 @@ select {
 	border: none;
 	background-color: #333;
 	color: #fff;
+	margin-right: 10px;
 }
 
 option {
@@ -61,4 +61,21 @@ button {
 
 button:hover {
 	background-color: #555;
+}
+
+h1 {
+	color: #ff6600;
+	/* Màu cam */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* Font chữ */
+	font-size: 32px;
+	/* Kích thước chữ */
+	font-weight: bold;
+	/* Độ đậm */
+	text-transform: uppercase;
+	/* Chuyển đổi thành chữ in hoa */
+	letter-spacing: 2px;
+	/* Khoảng cách giữa các ký tự */
+	margin-bottom: 20px;
+	/* Khoảng cách với phần content dưới */
 }
