@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			21: "https://embed2.streamc.xyz/embed.php?hash=f8558b218789e286561ad7f0d427d9e7",
 			22: "https://embed3.streamc.xyz/embed.php?hash=dfbce5782fa7cec726564aa75f33d86d",
 		},
+		film3: {
+			1: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
+			2: "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
+		},
 	};
 
 	function loadEpisode(film) {
