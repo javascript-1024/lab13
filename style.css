@@ -9,7 +9,8 @@ body {
 	background-color: #121212;
 	color: #ffffff;
 	margin: 0;
-	padding: 0 10px; /* Add some padding to avoid content touching screen edges */
+	padding: 0 10px;
+	/* Add some padding to avoid content touching screen edges */
 }
 
 .container {
@@ -46,7 +47,8 @@ label {
 	font-size: 1.2em;
 }
 
-select, button {
+select,
+button {
 	padding: 10px;
 	border-radius: 5px;
 	border: none;
@@ -54,7 +56,8 @@ select, button {
 	color: #fff;
 	width: 100%;
 	max-width: 300px;
-	margin: 10px auto; /* Center-align elements */
+	margin: 10px auto;
+	/* Center-align elements */
 }
 
 option {
@@ -70,6 +73,20 @@ button:hover {
 	background-color: #555;
 }
 
+/* Note Styles */
+textarea {
+	width: 100%;
+	max-width: 800px;
+	height: 100px;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid #333;
+	background-color: #2e2e2e;
+	color: #fff;
+	resize: none;
+}
+
 /* Title Styles */
 h1 {
 	font-size: 2.5em;
@@ -83,12 +100,14 @@ h1 {
 	iframe {
 		height: 400px;
 	}
-	
+
 	h1 {
 		font-size: 2.2em;
 	}
-	
-	select, button {
+
+	select,
+	button,
+	textarea {
 		max-width: 90%;
 	}
 }
@@ -97,12 +116,14 @@ h1 {
 	iframe {
 		height: 300px;
 	}
-	
+
 	h1 {
 		font-size: 2em;
 	}
-	
-	select, button {
+
+	select,
+	button,
+	textarea {
 		max-width: 90%;
 	}
 }
@@ -111,20 +132,22 @@ h1 {
 	.container {
 		padding: 15px;
 	}
-	
+
 	iframe {
 		height: 250px;
 	}
-	
+
 	h1 {
 		font-size: 1.8em;
 	}
-	
-	select, button {
+
+	select,
+	button,
+	textarea {
 		padding: 8px;
 		max-width: 100%;
 	}
-	
+
 	label {
 		font-size: 1em;
 	}

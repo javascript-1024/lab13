@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const iframe = document.getElementById("videoPlayer");
 	const episodeSelect = document.getElementById("episodeSelect");
 	const filmSelect = document.getElementById("filmSelect");
+	const note = document.getElementById("note");
 
 	const videoLinks = {
 		film1: {
@@ -80,6 +81,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		episodeSelect.value = currentEpisode;
 	}
 
+	function loadNote() {
+		const film = filmSelect.value;
+		const currentNote = localStorage.getItem(`${film}Note`) || "";
+		note.value = currentNote;
+	}
+
+	function saveNote() {
+		const film = filmSelect.value;
+		const currentNote = note.value;
+		localStorage.setItem(`${film}Note`, currentNote);
+	}
+
 	function populateEpisodeSelect(film) {
 		const episodes = Object.keys(videoLinks[film]);
 		episodeSelect.innerHTML = "";
@@ -95,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const selectedFilm = filmSelect.value;
 		populateEpisodeSelect(selectedFilm);
 		loadEpisode(selectedFilm);
+		loadNote();
 	});
 
 	episodeSelect.addEventListener("change", function () {
@@ -104,8 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		loadEpisode(selectedFilm);
 	});
 
+	note.addEventListener("input", saveNote);
+
 	const currentFilm = localStorage.getItem("currentFilm") || "film1";
 	filmSelect.value = currentFilm;
 	populateEpisodeSelect(currentFilm);
 	loadEpisode(currentFilm);
+	loadNote();
 });
