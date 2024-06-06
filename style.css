@@ -95,6 +95,30 @@ h1 {
 	font-family: 'Pacifico', cursive;
 }
 
+/* Time Conversion Styles */
+#timeInput,
+#convertButton {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #333;
+	background-color: #2e2e2e;
+	color: #fff;
+	width: calc(50% - 5px);
+	/* Adjust width as per your design */
+	margin: 10px auto;
+	display: inline-block;
+	/* Ensure they are on the same line */
+}
+
+#convertButton {
+	background-color: #333;
+	cursor: pointer;
+}
+
+#convertButton:hover {
+	background-color: #555;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
 	iframe {
@@ -107,7 +131,9 @@ h1 {
 
 	select,
 	button,
-	textarea {
+	textarea,
+	#timeInput,
+	#convertButton {
 		max-width: 90%;
 	}
 }
@@ -123,7 +149,9 @@ h1 {
 
 	select,
 	button,
-	textarea {
+	textarea,
+	#timeInput,
+	#convertButton {
 		max-width: 90%;
 	}
 }
@@ -143,7 +171,9 @@ h1 {
 
 	select,
 	button,
-	textarea {
+	textarea,
+	#timeInput,
+	#convertButton {
 		padding: 8px;
 		max-width: 100%;
 	}

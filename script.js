@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const filmSelect = document.getElementById("filmSelect");
 	const note = document.getElementById("note");
 
+	const timeInput = document.getElementById("timeInput");
+	const convertButton = document.getElementById("convertButton");
+	const timeInSeconds = document.getElementById("timeInSeconds");
+
 	const videoLinks = {
 		film1: {
 			1: "https://embed3.streamc.xyz/embed.php?hash=60da6a8137cb20f06ec036ab829b79d5",
@@ -93,6 +97,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		localStorage.setItem(`${film}Note`, currentNote);
 	}
 
+	function saveTimeInput() {
+		const timeValue = timeInput.value;
+		localStorage.setItem("timeInput", timeValue);
+	}
+
+	function loadTimeInput() {
+		const savedTimeInput = localStorage.getItem("timeInput");
+		if (savedTimeInput) {
+			timeInput.value = savedTimeInput;
+		}
+	}
+
 	function populateEpisodeSelect(film) {
 		const episodes = Object.keys(videoLinks[film]);
 		episodeSelect.innerHTML = "";
@@ -108,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const selectedFilm = filmSelect.value;
 		populateEpisodeSelect(selectedFilm);
 		loadEpisode(selectedFilm);
-		loadNote();
+		// loadNote();
 	});
 
 	episodeSelect.addEventListener("change", function () {
@@ -118,11 +134,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		loadEpisode(selectedFilm);
 	});
 
-	note.addEventListener("input", saveNote);
+	// note.addEventListener("input", saveNote);
+
+	convertButton.addEventListener("click", function () {
+		const timeParts = timeInput.value.split(":");
+		const minutes = parseInt(timeParts[0], 10) || 0;
+		const seconds = parseInt(timeParts[1], 10) || 0;
+		const totalSeconds = minutes * 60 + seconds;
+		timeInSeconds.textContent = `Thời gian tính bằng giây: ${totalSeconds}`;
+		saveTimeInput(); // Save time input value
+	});
 
 	const currentFilm = localStorage.getItem("currentFilm") || "film1";
 	filmSelect.value = currentFilm;
 	populateEpisodeSelect(currentFilm);
 	loadEpisode(currentFilm);
-	loadNote();
+	// loadNote();
+	loadTimeInput(); // Load time input value when page loads
 });
