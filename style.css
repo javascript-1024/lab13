@@ -21,7 +21,7 @@ body {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 	width: 100%;
 	max-width: 800px;
-	margin: 20px;
+	margin: 20px auto;
 }
 
 iframe {
@@ -183,21 +183,31 @@ h1 {
 	}
 }
 
+.episode-buttons {
+	margin-top: 10px;
+}
+
 #prevEpisodeButton,
 #nextEpisodeButton {
-    background-color: #4CAF50; /* Màu nền */
-    border: none;
-    color: white; /* Màu chữ */
-    padding: 10px 20px; /* Kích thước nút */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+	background-color: #4CAF50;
+	/* Màu nền */
+	border: none;
+	color: white;
+	/* Màu chữ */
+	padding: 10px 20px;
+	/* Kích thước nút */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 10px;
+	/* Khoảng cách giữa nút */
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 #prevEpisodeButton:hover,
 #nextEpisodeButton:hover {
-    background-color: #45a049; /* Màu nền khi di chuột vào */
+	background-color: #45a049;
+	/* Màu nền khi di chuột vào */
 }
