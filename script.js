@@ -120,6 +120,30 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	const prevEpisodeButton = document.getElementById("prevEpisodeButton");
+    const nextEpisodeButton = document.getElementById("nextEpisodeButton");
+
+    prevEpisodeButton.addEventListener("click", function () {
+        const selectedFilm = filmSelect.value;
+        const currentEpisode = parseInt(episodeSelect.value);
+        if (currentEpisode > 1) {
+            const previousEpisode = currentEpisode - 1;
+            localStorage.setItem(selectedFilm, previousEpisode);
+            loadEpisode(selectedFilm);
+        }
+    });
+
+    nextEpisodeButton.addEventListener("click", function () {
+        const selectedFilm = filmSelect.value;
+        const currentEpisode = parseInt(episodeSelect.value);
+        const totalEpisodes = Object.keys(videoLinks[selectedFilm]).length;
+        if (currentEpisode < totalEpisodes) {
+            const nextEpisode = currentEpisode + 1;
+            localStorage.setItem(selectedFilm, nextEpisode);
+            loadEpisode(selectedFilm);
+        }
+    });
+
 	filmSelect.addEventListener("change", function () {
 		const selectedFilm = filmSelect.value;
 		populateEpisodeSelect(selectedFilm);
