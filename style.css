@@ -182,3 +182,22 @@ h1 {
 		font-size: 1em;
 	}
 }
+
+#prevEpisodeButton,
+#nextEpisodeButton {
+    background-color: #4CAF50; /* Màu nền */
+    border: none;
+    color: white; /* Màu chữ */
+    padding: 10px 20px; /* Kích thước nút */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#prevEpisodeButton:hover,
+#nextEpisodeButton:hover {
+    background-color: #45a049; /* Màu nền khi di chuột vào */
+}
