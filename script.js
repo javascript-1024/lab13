@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			1: "https://embed3.streamc.xyz/embed.php?hash=07431a12712e36906e1faac3ac05ae10",
 			2: "https://embed3.streamc.xyz/embed.php?hash=d1f8c9f34876e772d7a3ab618edc33f2",
 			3: "https://embed2.streamc.xyz/embed.php?hash=b22af338e60fd4ea27a0dcd3d7a0bfff",
-			4: "https://embed2.streamc.xyz/embed.php?hash=5932b24e32b0f539a1d5b3a9a3dfb924",
+			4: "https://haivan.info/player/?d=4n8bAPg&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-4-147208.html",
 			5: "https://embed2.streamc.xyz/embed.php?hash=dda3c1346514e36d5630368441b889d6",
 			6: "https://embed2.streamc.xyz/embed.php?hash=92d2f1a8b5085a0982534d8d3d01ce1d",
 			7: "https://embed2.streamc.xyz/embed.php?hash=faaf42be3bdcd16765ed4ae80b3eee18",
