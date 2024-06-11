@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			21: "https://embed2.streamc.xyz/embed.php?hash=f8558b218789e286561ad7f0d427d9e7",
 			22: "https://embed3.streamc.xyz/embed.php?hash=dfbce5782fa7cec726564aa75f33d86d",
 			23: "https://haivan.info/player/?d=LWnJ1vq&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-23-147574.html",
-			24: "https://vip.opstream17.com/share/82077c274c8b1917a195adc43f641529",
-			25: "https://vip.opstream17.com/share/ea4c796cccfc3899b5f9ae2874237c20",
-			26: "https://vip.opstream17.com/share/7596bea4cb46be88876d2a65f23ffd92",			
+			24: "https://haivan.info/player/?d=A4xag0Q&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-24-147575.html",
+			25: "https://haivan.info/player/?d=P7gy2R5&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-25-147706.html",
+			26: "https://haivan.info/player/?d=4gyvopM&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-26-147707.html",			
 		},
 		film3: {
 			1: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
