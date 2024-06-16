@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			localStorage.setItem("currentFilm", film);
 			episodeSelect.value = currentEpisode;
 		} else {
-			console.error(`Video URL for ${film} episode ${currentEpisode} is not available.`);
+			alert(`Video URL for episode ${currentEpisode} is not available.`);
 		}
 	}
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				localStorage.setItem(selectedFilm, previousEpisode);
 				loadEpisode(selectedFilm);
 			} else {
-				console.error(`Video URL for ${selectedFilm} episode ${previousEpisode} is not available.`);
+				alert(`Video URL for ${selectedFilm} episode ${previousEpisode} is not available.`);
 			}
 		}
 	});
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				localStorage.setItem(selectedFilm, nextEpisode);
 				loadEpisode(selectedFilm);
 			} else {
-				console.error(`Video URL for ${selectedFilm} episode ${nextEpisode} is not available.`);
+				alert(`Video URL for ${selectedFilm} episode ${nextEpisode} is not available.`);
 			}
 		}
 	});
