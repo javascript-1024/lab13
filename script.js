@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			23: "https://haivan.info/player/?d=LWnJ1vq&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-23-147574.html",
 			24: "https://haivan.info/player/?d=A4xag0Q&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-24-147575.html",
 			25: "https://haivan.info/player/?d=P7gy2R5&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-25-147706.html",
-			26: "https://haivan.info/player/?d=4gyvopM&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-26-147707.html",			
+			26: "https://haivan.info/player/?d=4gyvopM&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-26-147707.html",
 		},
 		film3: {
-			1: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
-			2: "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
+			VietSub: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
+			"Lồng Tiếng": "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
 		},
 		film4: {
 			1: "https://embed2.streamc.xyz/embed.php?hash=b1a32e6ebf296a2bb5e1e2d4018cbece",
@@ -127,7 +127,47 @@ document.addEventListener("DOMContentLoaded", function () {
 			45: "https://embed2.streamc.xyz/embed.php?hash=2fee3799a636e59855c4dd4e2cd9d3d7",
 			46: "https://embed2.streamc.xyz/embed.php?hash=1f32e0bf1928d0218566fb64065e0d09",
 		},
+		film5: {
+			"Lồng Tiếng": "https://embed3.streamc.xyz/embed.php?hash=0b98da3a006f8f5c95d875a3494e33fc",
+		},
 	};
+
+	function updateFilmOptions() {
+		const filmTypeSelect = document.getElementById("filmTypeSelect");
+		const filmSelect = document.getElementById("filmSelect");
+		const selectedType = filmTypeSelect.value;
+
+		// Xóa tất cả các tùy chọn hiện tại
+		while (filmSelect.firstChild) {
+			filmSelect.removeChild(filmSelect.firstChild);
+		}
+
+		// Tạo các tùy chọn phim mới dựa trên loại phim được chọn
+		let options = [];
+		if (selectedType === "phimLe") {
+			options = [
+				{ value: "film3", text: "KungFu Panda 4" },
+				{ value: "film5", text: "Mai (Trấn Thành)" },
+			];
+		} else if (selectedType === "phimBo") {
+			options = [
+				{ value: "film2", text: "Phá Kén 2 (Full)" },
+				{ value: "film4", text: "Khánh Dư Niên 1 (Full)" },
+				{ value: "film1", text: "Khánh Dư Niên 2 (Full)" },
+			];
+		}
+
+		// Thêm các tùy chọn mới vào thẻ <select>
+		options.forEach((option) => {
+			const opt = document.createElement("option");
+			opt.value = option.value;
+			opt.textContent = option.text;
+			filmSelect.appendChild(opt);
+		});
+		const selectedFilm = filmSelect.value;
+		populateEpisodeSelect(selectedFilm);
+		loadEpisode(selectedFilm);
+	}
 
 	function loadEpisode(film) {
 		const currentEpisode = localStorage.getItem(film) || 1;
@@ -163,11 +203,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function populateEpisodeSelect(film) {
 		const episodes = Object.keys(videoLinks[film]);
+		const filmTypeSelect = document.getElementById("filmTypeSelect");
 		episodeSelect.innerHTML = "";
+		const selectedType = filmTypeSelect.value;
 		episodes.forEach((episode) => {
 			let option = document.createElement("option");
 			option.value = episode;
-			option.textContent = `Tập ${episode}`;
+			if (selectedType === "phimLe") {
+				option.textContent = `${episode}`;
+			} else if (selectedType === "phimBo") {
+				option.textContent = `Tập ${episode}`;
+			}
 			episodeSelect.appendChild(option);
 		});
 	}
@@ -227,4 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	loadEpisode(currentFilm);
 	// loadNote();
 	loadTimeInput(); // Load time input value when page loads
+
+	document.getElementById("filmTypeSelect").addEventListener("change", updateFilmOptions);
+	updateFilmOptions();
 });

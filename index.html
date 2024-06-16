@@ -12,13 +12,17 @@
 		<div class="container">
 			<h1>XEM PHIM</h1>
 			<div class="episodes">
+				<label for="filmTypeSelect">Chọn Loại Phim:</label>
+				<select id="filmTypeSelect" onchange="updateFilmOptions()">
+					<option value="phimBo">Phim Bộ</option>
+					<option value="phimLe">Phim Lẻ</option>
+				</select>
+
 				<label for="filmSelect">Chọn Phim:</label>
 				<select id="filmSelect">
-					<option value="film2">Phá Kén 2 (Full)</option>
-					<option value="film3">KungFu Panda 4</option>
-					<option value="film4">Khánh Dư Niên 1 (Full)</option>
-					<option value="film1">Khánh Dư Niên 2 (Full)</option>
+					<!-- Các tùy chọn phim sẽ được cập nhật tại đây -->
 				</select>
+
 				<label for="episodeSelect">Chọn Tập:</label>
 				<select id="episodeSelect"></select>
 				<div class="episode-buttons">
