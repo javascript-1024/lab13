@@ -46,14 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function loadEpisode(film) {
-		const currentEpisode = localStorage.getItem(film) || 1;
-		const videoUrl = videoLinks[film][currentEpisode];
+		let currentEpisode = localStorage.getItem(film) || 1;
+		let videoUrl = videoLinks[film][currentEpisode];
 		if (videoUrl) {
 			iframe.src = videoUrl;
 			localStorage.setItem("currentFilm", film);
 			episodeSelect.value = currentEpisode;
 		} else {
 			alert(`Video URL for episode ${currentEpisode} is not available.`);
+			currentEpisode = 1;
+			videoUrl = videoLinks[film][currentEpisode];
+			iframe.src = videoUrl;
+			localStorage.setItem("currentFilm", film);
+			episodeSelect.value = currentEpisode;
 		}
 	}
 
@@ -76,6 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		const selectedType = filmTypeSelect.value;
 
 		episodes.forEach((episode) => {
+			if (episode === "names") {
+				return;
+			}
 			let nameFilm = "";
 			if (selectedType === "phimLe") {
 				nameFilm = videoLinks[film].names[episode];

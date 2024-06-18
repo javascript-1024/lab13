@@ -1,5 +1,6 @@
 const videoLinks = {
 	film1: {
+		//Phá Kén 2
 		1: "https://embed3.streamc.xyz/embed.php?hash=60da6a8137cb20f06ec036ab829b79d5",
 		2: "https://embed3.streamc.xyz/embed.php?hash=b8aa76a31460ffb790bd862f1655f729",
 		3: "https://embed3.streamc.xyz/embed.php?hash=55366e9191271ddc3a81021d70a2771d",
@@ -38,6 +39,7 @@ const videoLinks = {
 		36: "https://embed2.streamc.xyz/embed.php?hash=ce3ad183e8d4cf2e0181a5ac7a78421d",
 	},
 	film2: {
+		// Khánh Dư Niên 2
 		1: "https://embed3.streamc.xyz/embed.php?hash=07431a12712e36906e1faac3ac05ae10",
 		2: "https://embed3.streamc.xyz/embed.php?hash=d1f8c9f34876e772d7a3ab618edc33f2",
 		3: "https://embed2.streamc.xyz/embed.php?hash=b22af338e60fd4ea27a0dcd3d7a0bfff",
@@ -66,6 +68,7 @@ const videoLinks = {
 		26: "https://haivan.info/player/?d=4gyQBQq&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-26-147707.html",
 	},
 	film3: {
+		//KungFu Panda 4
 		1: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
 		2: "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
 		names: {
@@ -74,6 +77,7 @@ const videoLinks = {
 		},
 	},
 	film4: {
+		// Khánh Dư Niên 1
 		1: "https://embed2.streamc.xyz/embed.php?hash=b1a32e6ebf296a2bb5e1e2d4018cbece",
 		2: "https://embed2.streamc.xyz/embed.php?hash=b2e2b956f7b8e76290b5e0cf3444ccd3",
 		3: "https://embed2.streamc.xyz/embed.php?hash=f5ce39f362b102b0b80c5c3ff0540711",
@@ -122,6 +126,7 @@ const videoLinks = {
 		46: "https://embed2.streamc.xyz/embed.php?hash=1f32e0bf1928d0218566fb64065e0d09",
 	},
 	film5: {
+		//Mai (Trấn Thành)
 		1: "https://embed3.streamc.xyz/embed.php?hash=0b98da3a006f8f5c95d875a3494e33fc",
 		names: {
 			1: "Lồng Tiếng",
