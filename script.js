@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	const iframe = document.getElementById("videoPlayer");
 	const episodeSelect = document.getElementById("episodeSelect");
 	const filmSelect = document.getElementById("filmSelect");
-
 	const timeInput = document.getElementById("timeInput");
 	const convertButton = document.getElementById("convertButton");
 	const timeInSeconds = document.getElementById("timeInSeconds");
+
+	const prevEpisodeButton = document.getElementById("prevEpisodeButton");
+	const nextEpisodeButton = document.getElementById("nextEpisodeButton");
 
 	function updateFilmOptions() {
 		const filmTypeSelect = document.getElementById("filmTypeSelect");
@@ -72,16 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		const filmTypeSelect = document.getElementById("filmTypeSelect");
 		episodeSelect.innerHTML = "";
 		const selectedType = filmTypeSelect.value;
+
 		episodes.forEach((episode) => {
+			let nameFilm = "";
+			if (selectedType === "phimLe") {
+				nameFilm = videoLinks[film].names[episode];
+			}
 			let option = document.createElement("option");
 			option.value = episode;
-			option.textContent = selectedType === "phimLe" ? episode : `Tập ${episode}`;
+			option.textContent = selectedType === "phimLe" ? nameFilm : `Tập ${episode}`;
 			episodeSelect.appendChild(option);
 		});
 	}
-
-	const prevEpisodeButton = document.getElementById("prevEpisodeButton");
-	const nextEpisodeButton = document.getElementById("nextEpisodeButton");
 
 	prevEpisodeButton.addEventListener("click", function () {
 		const selectedFilm = filmSelect.value;

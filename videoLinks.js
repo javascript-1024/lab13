@@ -66,8 +66,12 @@ const videoLinks = {
 		26: "https://haivan.info/player/?d=4gyQBQq&v=p&mad=1&ref=https://motchillj.net/xem-phim-pha-ken-2-tap-26-147707.html",
 	},
 	film3: {
-		VietSub: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
-		"Lồng Tiếng": "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
+		1: "https://embed.streamc.xyz/embed.php?hash=348ca95ddd3f70939276bafd8ebf0338",
+		2: "https://embed.streamc.xyz/embed.php?hash=b3b67f07cd8ed6dbd8b35d326685aa04",
+		names: {
+			1: "VietSub",
+			2: "Lồng Tiếng",
+		},
 	},
 	film4: {
 		1: "https://embed2.streamc.xyz/embed.php?hash=b1a32e6ebf296a2bb5e1e2d4018cbece",
@@ -118,7 +122,10 @@ const videoLinks = {
 		46: "https://embed2.streamc.xyz/embed.php?hash=1f32e0bf1928d0218566fb64065e0d09",
 	},
 	film5: {
-		"Lồng Tiếng": "https://embed3.streamc.xyz/embed.php?hash=0b98da3a006f8f5c95d875a3494e33fc",
+		1: "https://embed3.streamc.xyz/embed.php?hash=0b98da3a006f8f5c95d875a3494e33fc",
+		names: {
+			1: "Lồng Tiếng",
+		},
 	},
 };
 
