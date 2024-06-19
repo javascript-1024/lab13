@@ -5,36 +5,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>XEMPHIMHAY</title>
 		<link rel="icon" type="image/x-icon" href="https://assets.nflxext.com/en_us/layout/ecweb/netflix-app-icon_152.jpg" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" />
-		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			body {
+				font-family: "Roboto", sans-serif;
+			}
+			h1 {
+				font-family: "Pacifico", cursive;
+			}
+		</style>
 	</head>
-	<body>
-		<div class="container">
-			<h1>THẾ GIỚI PHIM</h1>
-			<div class="episodes">
-				<label for="filmTypeSelect">Chọn Loại Phim:</label>
-				<select id="filmTypeSelect">
-					<option value="phimBo">Phim Bộ</option>
-					<option value="phimLe">Phim Lẻ</option>
-				</select>
-
-				<label for="filmSelect">Chọn Phim:</label>
-				<select id="filmSelect">
-					<!-- Các tùy chọn phim sẽ được cập nhật tại đây -->
-				</select>
-
-				<label for="episodeSelect">Chọn Tập:</label>
-				<select id="episodeSelect"></select>
-				<div class="episode-buttons">
-					<button id="prevEpisodeButton">Tập trước</button>
-					<button id="nextEpisodeButton">Tập tiếp theo</button>
+	<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+		<div class="container mx-auto bg-gray-800 text-center p-8 rounded-lg shadow-lg w-full max-w-3xl mt-8">
+			<h1 class="text-4xl mb-8 text-pink-500">THẾ GIỚI PHIM</h1>
+			<div class="episodes mb-8">
+				<div class="flex flex-wrap justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+					<div class="flex flex-col w-full sm:w-auto sm:flex-1">
+						<label for="filmTypeSelect" class="block text-lg">Chọn Loại Phim:</label>
+						<select id="filmTypeSelect" class="block w-full bg-gray-700 text-white p-2 rounded mt-2">
+							<option value="phimBo">Phim Bộ</option>
+							<option value="phimLe">Phim Lẻ</option>
+						</select>
+					</div>
+					<div class="flex flex-col w-full sm:w-auto sm:flex-1">
+						<label for="filmSelect" class="block text-lg">Chọn Phim:</label>
+						<select id="filmSelect" class="block w-full bg-gray-700 text-white p-2 rounded mt-2">
+							<!-- Các tùy chọn phim sẽ được cập nhật tại đây -->
+						</select>
+					</div>
+				</div>
+				<label for="episodeSelect" class="block text-lg mt-4">Chọn Tập:</label>
+				<select id="episodeSelect" class="block w-full max-w-xs mx-auto bg-gray-700 text-white p-2 rounded mt-2"></select>
+				<div class="episode-buttons flex justify-center mt-4 space-x-2">
+					<button id="prevEpisodeButton" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">Tập trước</button>
+					<button id="nextEpisodeButton" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">Tập tiếp theo</button>
 				</div>
 			</div>
-			<iframe id="videoPlayer" width="600" height="400" frameborder="0" allowfullscreen></iframe>
-			<label for="timeInput">Ghi Chú:</label>
-			<input type="text" id="timeInput" placeholder="00:00" />
-			<button id="convertButton">Chuyển đổi</button>
-			<p id="timeInSeconds"></p>
+			<iframe id="videoPlayer" class="border border-gray-700 rounded w-full h-72 md:h-96 mt-8" frameborder="0" allowfullscreen></iframe>
+			<label for="timeInput" class="block text-lg mt-8">Ghi Chú:</label>
+			<input type="text" id="timeInput" placeholder="00:00" class="w-full max-w-xs mx-auto bg-gray-700 text-white p-2 rounded mt-2" />
+			<button id="convertButton" class="w-full max-w-xs mx-auto bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded mt-4">Chuyển đổi</button>
+			<p id="timeInSeconds" class="mt-4 text-gray-400"></p>
 		</div>
 		<script type="module" src="script.js"></script>
 		<script type="module" src="videoLinks.js"></script>
