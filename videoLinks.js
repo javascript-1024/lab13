@@ -1,6 +1,6 @@
 const videoLinks = {
 	film1: {
-		//Phá Kén 2
+		//Khánh Dư Niên 2
 		1: "https://embed3.streamc.xyz/embed.php?hash=60da6a8137cb20f06ec036ab829b79d5",
 		2: "https://embed3.streamc.xyz/embed.php?hash=b8aa76a31460ffb790bd862f1655f729",
 		3: "https://embed3.streamc.xyz/embed.php?hash=55366e9191271ddc3a81021d70a2771d",
@@ -39,7 +39,7 @@ const videoLinks = {
 		36: "https://embed2.streamc.xyz/embed.php?hash=ce3ad183e8d4cf2e0181a5ac7a78421d",
 	},
 	film2: {
-		// Khánh Dư Niên 2
+		// Phá Kén 2
 		1: "https://embed3.streamc.xyz/embed.php?hash=07431a12712e36906e1faac3ac05ae10",
 		2: "https://embed3.streamc.xyz/embed.php?hash=d1f8c9f34876e772d7a3ab618edc33f2",
 		3: "https://embed2.streamc.xyz/embed.php?hash=b22af338e60fd4ea27a0dcd3d7a0bfff",
@@ -131,6 +131,49 @@ const videoLinks = {
 		names: {
 			1: "Lồng Tiếng",
 		},
+	},
+	film6: {
+		//Thả Thí Thiên Hạ
+		1: "https://embed.streamc.xyz/embed.php?hash=9bcd65cfcde53615465b85930bd2b759",
+		2: "https://embed.streamc.xyz/embed.php?hash=eb05665b91ed8e3fcb865534b18ae8d5",
+		3: "https://embed.streamc.xyz/embed.php?hash=a2558361b8316a8b8863f432d259ec2d",
+		4: "https://embed.streamc.xyz/embed.php?hash=3b32d63ace81fbe9889bf6d4566ecc2c",
+		5: "https://embed.streamc.xyz/embed.php?hash=d1f2bd4fbc762ccd1b3c2e29017744cd",
+		6: "https://embed.streamc.xyz/embed.php?hash=6a97ee27278b65975e1236b5d742b301",
+		7: "https://embed.streamc.xyz/embed.php?hash=ec156ea6f9037d6cbb6704e90fe2cd6d",
+		8: "https://embed.streamc.xyz/embed.php?hash=c4480bc75726eacfa63f2c859afdb044",
+		9: "https://embed.streamc.xyz/embed.php?hash=7e1f1584062cc07f548a520f6402bc97",
+		10: "https://embed.streamc.xyz/embed.php?hash=898c51463d944948acab2517434c9fa3",
+		11: "https://embed.streamc.xyz/embed.php?hash=b4ddb764b065877669176b54b9542a92",
+		12: "https://embed.streamc.xyz/embed.php?hash=861e131cdf0620683ceb3a50d942868c",
+		13: "https://embed.streamc.xyz/embed.php?hash=f6198cde5f98cf49fe9eb2d42f165015",
+		14: "https://embed.streamc.xyz/embed.php?hash=1d1efa7b235f0d5bbc4c62e71cdd33b6",
+		15: "https://embed.streamc.xyz/embed.php?hash=029d7879705a5fcdaeebab2588f67e1b",
+		16: "https://embed.streamc.xyz/embed.php?hash=6f0b051b76e9884356527349799f41c5",
+		17: "https://embed.streamc.xyz/embed.php?hash=505716dbafb10d69220624b04a40ba93",
+		18: "https://embed.streamc.xyz/embed.php?hash=9ee41b1d12eb31787b20b9c18a9b102c",
+		19: "https://embed.streamc.xyz/embed.php?hash=41b6c2e3d059b057e71532085dd66351",
+		20: "https://embed.streamc.xyz/embed.php?hash=99eb33af34f38f9ba30654bbdd40704a",
+		21: "https://embed.streamc.xyz/embed.php?hash=5395d4186ddc36a8cfd51bb1f4e18540",
+		22: "https://embed.streamc.xyz/embed.php?hash=c27206f0007a0231ed5f9ff34f8dd742",
+		23: "https://embed.streamc.xyz/embed.php?hash=889587516c2d3009aed8efcb1a45a2fb",
+		24: "https://embed.streamc.xyz/embed.php?hash=83fb21aa4f3d65cc3e50d1465d716c9d",
+		25: "https://embed.streamc.xyz/embed.php?hash=d0501ae55b57a2083bcc50b70c6287fb",
+		26: "https://embed.streamc.xyz/embed.php?hash=6f735d0d54bc5ce5191ed1ec8fd6972c",
+		27: "https://embed.streamc.xyz/embed.php?hash=a65e5af992499dccac1da716df406cf9",
+		28: "https://embed.streamc.xyz/embed.php?hash=9d4a1e7122ac03468e2ade758ce4c826",
+		29: "https://embed.streamc.xyz/embed.php?hash=430c92d8574036f4d3f27bc49faa62ea",
+		30: "https://embed.streamc.xyz/embed.php?hash=faba1f8da121fa33b74ac535c85daede",
+		31: "https://embed.streamc.xyz/embed.php?hash=879eb7cbe06bf9c94d0726e537822288",
+		32: "https://embed.streamc.xyz/embed.php?hash=8f2e4ddda33381866f90e6a722385272",
+		33: "https://embed.streamc.xyz/embed.php?hash=4f9641bd9ec8523a3f29eb1abb224753",
+		34: "https://embed.streamc.xyz/embed.php?hash=01da31b7f42ed5be483a5caefa38a336",
+		35: "https://embed.streamc.xyz/embed.php?hash=b674017af016dccb08bcfeb6df308196",
+		36: "https://embed.streamc.xyz/embed.php?hash=95f1ad324c03247f3c0bc90543deb39e",
+		37: "https://embed.streamc.xyz/embed.php?hash=7db376d03c727058b7989bea0722686c",
+		38: "https://embed.streamc.xyz/embed.php?hash=f1893131b044d78d4183f48a6ee7e7c7",
+		39: "https://embed.streamc.xyz/embed.php?hash=8b36ec9f05f2c81557dda890ec4d0304",
+		40: "https://embed.streamc.xyz/embed.php?hash=9b9fedf8014be6b137fd4393785cb6e9",
 	},
 };
 

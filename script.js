@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			];
 		} else if (selectedType === "phimBo") {
 			options = [
-				{ value: "film2", text: "Phá Kén 2 (Full)" },
-				{ value: "film4", text: "Khánh Dư Niên 1 (Full)" },
-				{ value: "film1", text: "Khánh Dư Niên 2 (Full)" },
+				{ value: "film2", text: "Phá Kén 2" },
+				{ value: "film4", text: "Khánh Dư Niên 1" },
+				{ value: "film1", text: "Khánh Dư Niên 2" },
+				{ value: "film6", text: "Thả Thí Thiên Hạ" },
 			];
 		}
 
