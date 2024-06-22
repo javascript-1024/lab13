@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				{ value: "film4", text: "Khánh Dư Niên 1" },
 				{ value: "film1", text: "Khánh Dư Niên 2" },
 				{ value: "film6", text: "Thả Thí Thiên Hạ" },
+				{ value: "film7", text: "Bạn Trai Tôi Là Hồ Ly 2" },
 			];
 		}
 
