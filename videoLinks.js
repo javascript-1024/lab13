@@ -209,6 +209,16 @@ const videoLinks = {
 		15: "https://embed.streamc.xyz/embed.php?hash=87320c8e6b3125140c29fee7d141e3a5",
 		16: "https://embed.streamc.xyz/embed.php?hash=0a4bd7715c43462a0980c9b1c393d2ed",
 	},
+	film9: {
+		//Conan
+		1: "https://embed1.streamc.xyz/embed.php?hash=b0aba3cd73f89a8760d8ff2d556af68f",
+		1123: "https://embed1.streamc.xyz/embed.php?hash=28f8b4ad4d88eefb7b21cad50f9352f3",
+		1124: "https://embed1.streamc.xyz/embed.php?hash=dcd9bfc58317b926f8ccf52334070080",
+		1125: "https://embed1.streamc.xyz/embed.php?hash=a6e8046abe7e8cf2a68e6d9d31835c4a",
+		1126: "https://embed1.streamc.xyz/embed.php?hash=a0722ee4f30a7a14b9a28e684f002464",
+		1127: "https://embed1.streamc.xyz/embed.php?hash=e5d458182b0162b68b8e0ccd8e1a548e",
+		1128: "https://embed1.streamc.xyz/embed.php?hash=ff7a80438174a96e276febcff2863e5a",
+	},
 };
 
 export default videoLinks;

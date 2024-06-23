@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			];
 		} else if (selectedType === "phimBo") {
 			options = [
+				{ value: "film9", text: "Thám Tử Lừng Danh Conan" },
 				{ value: "film2", text: "Phá Kén 2" },
 				{ value: "film4", text: "Khánh Dư Niên 1" },
 				{ value: "film1", text: "Khánh Dư Niên 2" },
