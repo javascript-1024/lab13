@@ -190,6 +190,25 @@ const videoLinks = {
 		11: "https://embed.streamc.xyz/embed.php?hash=8afe33badd08f0dcea0c52bcacdba4da",
 		12: "https://embed.streamc.xyz/embed.php?hash=efc221bbf192575e934b73a98fc8e7fe",
 	},
+	film8: {
+		//Bạn Trai Tôi Là Hồ Ly
+		1: "https://embed.streamc.xyz/embed.php?hash=117c1ca1ca69e2f4032001879da5639f",
+		2: "https://embed.streamc.xyz/embed.php?hash=31340c161ee84afc369c5cb89763acb4",
+		3: "https://embed.streamc.xyz/embed.php?hash=a95920aae1fe34744715f8525cdda9c5",
+		4: "https://embed.streamc.xyz/embed.php?hash=6041f230207194eaab7ebc82d96e4dad",
+		5: "https://embed.streamc.xyz/embed.php?hash=23237dee99cf2fe25f7014ebb2b9b389",
+		6: "https://embed.streamc.xyz/embed.php?hash=adb237eddf5d4e8cbbdddd5f963072d1",
+		7: "https://embed.streamc.xyz/embed.php?hash=c1c9222f96de26088104681e9c8d6e63",
+		8: "https://embed.streamc.xyz/embed.php?hash=c489881a6aa6fc6c5d980c1b7c4e43fc",
+		9: "https://embed.streamc.xyz/embed.php?hash=71fed5a26320aa22cf63f9377941561b",
+		10: "https://embed.streamc.xyz/embed.php?hash=f41ce1a797ebf4f375862d1742c9d6ea",
+		11: "https://embed.streamc.xyz/embed.php?hash=0589706a94837f14ce8a5e10a857524b",
+		12: "https://embed.streamc.xyz/embed.php?hash=c19d9a3be968b40980ee7ce93f5d3ac4",
+		13: "https://embed.streamc.xyz/embed.php?hash=13487a5c3ad6566e2e3435de8ae5a5ab",
+		14: "https://embed.streamc.xyz/embed.php?hash=090820aec20311644cf343b37d18939f",
+		15: "https://embed.streamc.xyz/embed.php?hash=87320c8e6b3125140c29fee7d141e3a5",
+		16: "https://embed.streamc.xyz/embed.php?hash=0a4bd7715c43462a0980c9b1c393d2ed",
+	},
 };
 
 export default videoLinks;
