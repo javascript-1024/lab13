@@ -218,6 +218,7 @@ const videoLinks = {
 		1126: "https://embed1.streamc.xyz/embed.php?hash=a0722ee4f30a7a14b9a28e684f002464",
 		1127: "https://embed1.streamc.xyz/embed.php?hash=e5d458182b0162b68b8e0ccd8e1a548e",
 		1128: "https://embed1.streamc.xyz/embed.php?hash=ff7a80438174a96e276febcff2863e5a",
+		1129: "https://embed1.streamc.xyz/embed.php?hash=d2686c162bac13f993436ba31f3a4497",
 	},
 };
 
