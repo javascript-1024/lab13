@@ -220,6 +220,33 @@ const videoLinks = {
 		1128: "https://embed1.streamc.xyz/embed.php?hash=ff7a80438174a96e276febcff2863e5a",
 		1129: "https://embed1.streamc.xyz/embed.php?hash=d2686c162bac13f993436ba31f3a4497",
 	},
+	film10: {
+		//Châu Tinh Kỷ
+		1: "https://vip.opstream17.com/share/8fdd149fcaa7058caccc9c4ad5b0d89a",
+		2: "https://vip.opstream17.com/share/010e406df2463597c58286a93f8b3160",
+		3: "https://vip.opstream17.com/share/233f1dd0f3f537bcb7a338ea74d63483",
+		4: "https://vip.opstream17.com/share/baeabb8ff01160eec0b5db7da2805f57",
+		5: "https://vip.opstream17.com/share/094366eaa7a4b5d7f9ed227f212b3649",
+		6: "https://vip.opstream17.com/share/680390c55bbd9ce416d1d69a9ab4760d",
+		7: "https://vip.opstream17.com/share/94cb02feb750f20bad8a85dfe7e18d11",
+		8: "https://vip.opstream17.com/share/c67ba7c4c5c0cd4cc3e3a7146fe5c015",
+		9: "https://vip.opstream17.com/share/b5ecbbf5782cc7fe9e453f3a2f26f24b",
+		10: "https://vip.opstream17.com/share/55312eec654a75a08dc83de96adde735",
+		11: "https://vip.opstream17.com/share/654516d1b4df6917094de807156adc14",
+		12: "https://vip.opstream17.com/share/d98c1545b7619bd99b817cb3169cdfde",
+		13: "https://vip.opstream17.com/share/92650b2e92217715fe312e6fa7b90d82",
+		14: "https://vip.opstream17.com/share/7695ea769f021803c508817dd374bb27",
+		15: "https://vip.opstream17.com/share/c6969ae30d99f73951cb976b88a457af",
+		16: "https://vip.opstream17.com/share/2d36b5821f8affc6868b59dfc9af6c9f",
+		17: "https://vip.opstream17.com/share/3e98410c45ea98addec555019bbae8eb",
+		18: "https://vip.opstream17.com/share/c9e37c28ce5852218032aae6f5632b13",
+		19: "https://vip.opstream17.com/share/9c779f56f336b3c812343434f57b6a0e",
+		20: "https://vip.opstream17.com/share/220787ad7829c9cbc7e9953cb1c36fb3",
+		21: "https://vip.opstream17.com/share/40f6992c3c5816a1b42d2612fc26b936",
+		22: "https://vip.opstream17.com/share/8612c55d2969d1f587bf1c5aaaa32964",
+		23: "https://vip.opstream17.com/share/0a2298a72858d90d5c4b4fee954b6896",
+		24: "https://vip.opstream17.com/share/987b75e2727ae55289abd70d3f5864e6",
+	},
 };
 
 export default videoLinks;

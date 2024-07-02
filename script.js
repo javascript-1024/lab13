@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			];
 		} else if (selectedType === "phimBo") {
 			options = [
-				{ value: "film9", text: "Thám Tử Lừng Danh Conan" },
 				{ value: "film2", text: "Phá Kén 2" },
 				{ value: "film4", text: "Khánh Dư Niên 1" },
 				{ value: "film1", text: "Khánh Dư Niên 2" },
@@ -36,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				{ value: "film8", text: "Bạn Trai Tôi Là Hồ Ly" },
 				{ value: "film7", text: "Bạn Trai Tôi Là Hồ Ly 2" },
 			];
+		} else if (selectedType === "phimNgan") {
+			options = [{ value: "film10", text: "Châu Tinh Kỷ" }];
+		} else if (selectedType === "phimHoatHinh") {
+			options = [{ value: "film9", text: "Thám Tử Lừng Danh Conan" }];
 		}
 
 		options.forEach((option) => {
@@ -47,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		const selectedFilm = filmSelect.value;
 		populateEpisodeSelect(selectedFilm);
 		loadEpisode(selectedFilm);
+
+		localStorage.setItem("selectedFilmType", selectedType);
 	}
 
 	function loadEpisode(film) {
@@ -102,8 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	prevEpisodeButton.addEventListener("click", function () {
 		const selectedFilm = filmSelect.value;
 		const currentEpisode = parseInt(episodeSelect.value);
-		if (currentEpisode > 1) {
-			const previousEpisode = currentEpisode - 1;
+		const episodes = Object.keys(videoLinks[selectedFilm]);
+		const currentEpisodeIndex = episodes.indexOf(currentEpisode.toString());
+
+		if (currentEpisodeIndex > 0) {
+			const previousEpisode = parseInt(episodes[currentEpisodeIndex - 1]);
 			if (videoLinks[selectedFilm][previousEpisode]) {
 				localStorage.setItem(selectedFilm, previousEpisode);
 				loadEpisode(selectedFilm);
@@ -116,9 +124,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	nextEpisodeButton.addEventListener("click", function () {
 		const selectedFilm = filmSelect.value;
 		const currentEpisode = parseInt(episodeSelect.value);
-		const totalEpisodes = Object.keys(videoLinks[selectedFilm]).length;
-		if (currentEpisode < totalEpisodes) {
-			const nextEpisode = currentEpisode + 1;
+		const episodes = Object.keys(videoLinks[selectedFilm]);
+		const currentEpisodeIndex = episodes.indexOf(currentEpisode.toString());
+		const totalEpisodes = episodes.length;
+
+		if (currentEpisodeIndex !== -1 && currentEpisodeIndex < totalEpisodes - 1) {
+			const nextEpisode = parseInt(episodes[currentEpisodeIndex + 1]);
 			if (videoLinks[selectedFilm][nextEpisode]) {
 				localStorage.setItem(selectedFilm, nextEpisode);
 				loadEpisode(selectedFilm);
@@ -157,5 +168,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	loadTimeInput();
 
 	document.getElementById("filmTypeSelect").addEventListener("change", updateFilmOptions);
-	updateFilmOptions();
+	const savedFilmType = localStorage.getItem("selectedFilmType");
+	if (savedFilmType) {
+		document.getElementById("filmTypeSelect").value = savedFilmType;
+		updateFilmOptions();
+	}
 });
