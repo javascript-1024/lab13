@@ -28,12 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			];
 		} else if (selectedType === "phimBo") {
 			options = [
-				{ value: "film2", text: "Phá Kén 2" },
+				{ value: "film11", text: "Dữ Phượng Hành" },
+				{ value: "film12", text: "Mặc Vũ Vân Gian" },
 				{ value: "film4", text: "Khánh Dư Niên 1" },
 				{ value: "film1", text: "Khánh Dư Niên 2" },
 				{ value: "film6", text: "Thả Thí Thiên Hạ" },
 				{ value: "film8", text: "Bạn Trai Tôi Là Hồ Ly" },
 				{ value: "film7", text: "Bạn Trai Tôi Là Hồ Ly 2" },
+				{ value: "film2", text: "Phá Kén 2" },
 			];
 		} else if (selectedType === "phimNgan") {
 			options = [{ value: "film10", text: "Châu Tinh Kỷ" }];
