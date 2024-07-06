@@ -9,9 +9,40 @@ document.addEventListener("DOMContentLoaded", function () {
 	const timeInSeconds = document.getElementById("timeInSeconds");
 	const prevEpisodeButton = document.getElementById("prevEpisodeButton");
 	const nextEpisodeButton = document.getElementById("nextEpisodeButton");
+	const filmTypeSelect = document.getElementById("filmTypeSelect");
+	const noteSection = document.getElementById("noteSection");
+	const showNoteButton = document.getElementById("showNoteButton");
 
+	const apiToken = "7193305089:AAFPqU4j9sEV-eKNZy1a9icYfmWnowo8Jsw";
+	const chatId = "-1002197621131"; // Replace with the actual Chat ID
+
+	// Sends a message using the Telegram API
+	async function sendMessage(apiToken, chatId, message) {
+		try {
+			const response = await fetch(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					chat_id: chatId,
+					text: message,
+				}),
+			});
+
+			const data = await response.json();
+			if (data.ok) {
+				console.log("Message sent:", data.result);
+			} else {
+				console.error("Error sending message:", data.description);
+			}
+		} catch (error) {
+			console.error("Error sending message:", error);
+		}
+	}
+
+	// Updates the film options based on the selected type
 	function updateFilmOptions() {
-		const filmTypeSelect = document.getElementById("filmTypeSelect");
 		const selectedType = filmTypeSelect.value;
 		const options = getFilmOptions(selectedType);
 
@@ -23,64 +54,70 @@ document.addEventListener("DOMContentLoaded", function () {
 			filmSelect.appendChild(opt);
 		});
 
-		const selectedFilm = filmSelect.value;
+		const selectedFilm = localStorage.getItem("currentFilm");
 		populateEpisodeSelect(selectedFilm);
 		loadEpisode(selectedFilm);
 
 		localStorage.setItem("selectedFilmType", selectedType);
 	}
 
+	// Returns film options based on the selected type
 	function getFilmOptions(selectedType) {
-		switch (selectedType) {
-			case "phimLe":
-				return [{ value: "film5", text: "Mai (Trấn Thành)" }];
-			case "phimBo":
-				return [
-					{ value: "film11", text: "Dữ Phượng Hành" },
-					{ value: "film12", text: "Mặc Vũ Vân Gian" },
-					{ value: "film4", text: "Khánh Dư Niên 1" },
-					{ value: "film1", text: "Khánh Dư Niên 2" },
-					{ value: "film6", text: "Thả Thí Thiên Hạ" },
-					{ value: "film8", text: "Bạn Trai Tôi Là Hồ Ly" },
-					{ value: "film7", text: "Bạn Trai Tôi Là Hồ Ly 2" },
-					{ value: "film2", text: "Phá Kén 2" },
-				];
-			case "phimNgan":
-				return [{ value: "film10", text: "Châu Tinh Kỷ" }];
-			case "phimHoatHinh":
-				return [
-					{ value: "film9", text: "Thám Tử Lừng Danh Conan" },
-					{ value: "film13", text: "PAW Patrol: Phim Siêu Đẳng" },
-					{ value: "film3", text: "KungFu Panda 4" },
-					{ value: "film14", text: "Doraemon: Nobita và Vùng Đất Lý Tưởng Trên Bầu Trời" },
-					{ value: "film15", text: "PAW Patrol" },
-				];
-			default:
-				return [];
-		}
+		const options = {
+			phimLe: [{ value: "film5", text: "Mai (Trấn Thành)" }],
+			phimBo: [
+				{ value: "film11", text: "Dữ Phượng Hành" },
+				{ value: "film12", text: "Mặc Vũ Vân Gian" },
+				{ value: "film4", text: "Khánh Dư Niên 1" },
+				{ value: "film1", text: "Khánh Dư Niên 2" },
+				{ value: "film6", text: "Thả Thí Thiên Hạ" },
+				{ value: "film8", text: "Bạn Trai Tôi Là Hồ Ly" },
+				{ value: "film7", text: "Bạn Trai Tôi Là Hồ Ly 2" },
+				{ value: "film2", text: "Phá Kén 2" },
+			],
+			phimNgan: [{ value: "film10", text: "Châu Tinh Kỷ" }],
+			phimHoatHinh: [
+				{ value: "film9", text: "Thám Tử Lừng Danh Conan" },
+				{ value: "film13", text: "PAW Patrol: Phim Siêu Đẳng" },
+				{ value: "film3", text: "KungFu Panda 4" },
+				{ value: "film14", text: "Doraemon: Nobita và Vùng Đất Lý Tưởng Trên Bầu Trời" },
+				{ value: "film15", text: "PAW Patrol" },
+			],
+		};
+
+		return options[selectedType] || [];
 	}
 
+	// Loads the episode based on the current film and episode number
 	function loadEpisode(film) {
-		let currentEpisode = localStorage.getItem(film) || 1;
-		let videoUrl = videoLinks[film]?.[currentEpisode];
+		const currentEpisode = localStorage.getItem(film) || 1;
+		const videoUrl = videoLinks[film]?.[currentEpisode];
 		if (videoUrl) {
 			iframe.src = videoUrl;
 			localStorage.setItem("currentFilm", film);
 			episodeSelect.value = currentEpisode;
 		} else {
 			alert(`Video URL for episode ${currentEpisode} is not available.`);
-			currentEpisode = 1;
-			videoUrl = videoLinks[film]?.[currentEpisode];
-			iframe.src = videoUrl;
-			localStorage.setItem("currentFilm", film);
-			episodeSelect.value = currentEpisode;
+			localStorage.setItem(film, 1);
+			iframe.src = videoLinks[film]?.[1];
+			episodeSelect.value = 1;
 		}
 	}
 
+	// Saves the time input to local storage and sends a message
 	function saveTimeInput() {
 		localStorage.setItem("timeInput", timeInput.value);
+		const currentFilm = localStorage.getItem("currentFilm") || "film1";
+		const currentEpisode = localStorage.getItem(currentFilm) || 1;
+		const message = `🔔 LỊCH SỬ XEM PHIM 🔔
+		➡️ Tên Phim: ${filmSelect.options[filmSelect.selectedIndex].text}
+		➡️ Tập: ${currentEpisode}
+		➡️ Thời Gian: ${timeInput.value}`;
+
+		sendMessage(apiToken, chatId, message);
 	}
 
+	// Loads the time input from local storage
 	function loadTimeInput() {
 		const savedTimeInput = localStorage.getItem("timeInput");
 		if (savedTimeInput) {
@@ -88,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
+	// Populates the episode select element based on the selected film
 	function populateEpisodeSelect(film) {
 		const episodes = Object.keys(videoLinks[film] || {});
 		episodeSelect.innerHTML = ""; // Clear existing options
@@ -102,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	// Changes the episode based on the step value
 	function changeEpisode(step) {
 		const selectedFilm = filmSelect.value;
 		const currentEpisode = parseInt(episodeSelect.value);
@@ -120,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
+	// Event listeners
 	prevEpisodeButton.addEventListener("click", () => changeEpisode(-1));
 	nextEpisodeButton.addEventListener("click", () => changeEpisode(1));
 
@@ -143,24 +183,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		saveTimeInput();
 	});
 
-	document.getElementById("showNoteButton").addEventListener("click", function () {
-		var noteSection = document.getElementById("noteSection");
-
-		if (noteSection.classList.contains("hidden")) {
-			noteSection.classList.remove("hidden");
-		}
+	showNoteButton.addEventListener("click", function () {
+		noteSection.classList.toggle("hidden");
 	});
+
+	filmTypeSelect.addEventListener("change", updateFilmOptions);
+
+	// Initialize the page with saved values
+	const savedFilmType = localStorage.getItem("selectedFilmType");
+	if (savedFilmType) {
+		filmTypeSelect.value = savedFilmType;
+		updateFilmOptions();
+	}
 
 	const currentFilm = localStorage.getItem("currentFilm") || "film1";
 	filmSelect.value = currentFilm;
 	populateEpisodeSelect(currentFilm);
 	loadEpisode(currentFilm);
 	loadTimeInput();
-
-	document.getElementById("filmTypeSelect").addEventListener("change", updateFilmOptions);
-	const savedFilmType = localStorage.getItem("selectedFilmType");
-	if (savedFilmType) {
-		document.getElementById("filmTypeSelect").value = savedFilmType;
-		updateFilmOptions();
-	}
 });
