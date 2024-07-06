@@ -40,7 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else if (selectedType === "phimNgan") {
 			options = [{ value: "film10", text: "Châu Tinh Kỷ" }];
 		} else if (selectedType === "phimHoatHinh") {
-			options = [{ value: "film9", text: "Thám Tử Lừng Danh Conan" }];
+			options = [
+				{ value: "film9", text: "Thám Tử Lừng Danh Conan" },
+				{ value: "film13", text: "PAW Patrol: Phim Siêu Đẳng" },
+				{ value: "film14", text: "Doraemon Movie 43" },
+			];
 		}
 
 		options.forEach((option) => {

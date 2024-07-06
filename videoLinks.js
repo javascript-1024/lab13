@@ -333,6 +333,22 @@ const videoLinks = {
 		40: "https://embed3.streamc.xyz/embed.php?hash=1120dff0083e82147ea52fd269f9cee5",
 		41: "https://embed3.streamc.xyz/embed.php?hash=b9d10c5a53bedf292ccee13b95b65aac",
 	},
+	film13: {
+		//PAW Patrol: Phim Siêu Đẳng
+		1: "https://vip.opstream15.com/share/f9f0cd50df8a94019fc0391c61b96f3b",
+		2: "https://embed.streamc.xyz/embed.php?hash=2babc9ed8ad5673ea037aaee3d0865f0",
+		names: {
+			1: "Link 1",
+			2: "Link 2",
+		},
+	},
+	film14: {
+		//Doraemon Movie 43
+		1: "https://embed1.streamc.xyz/embed.php?hash=2e1e004d621b46e0acf993cdd9957ab9",
+		names: {
+			1: "Lồng Tiếng",
+		},
+	},
 };
 
 export default videoLinks;
