@@ -45,6 +45,7 @@
 					<button id="prevEpisodeButton" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded transition-colors duration-200 ease-in-out">Tập trước</button>
 					<button id="nextEpisodeButton" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded transition-colors duration-200 ease-in-out">Tập tiếp theo</button>
 					<button id="showNoteButton" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded transition-colors duration-200 ease-in-out">Ghi Chú</button>
+					<button id="captureScreen" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded transition-colors duration-200 ease-in-out">Chụp Màn Hình</button>
 				</div>
 			</div>
 			<div class="w-full mt-8">
@@ -52,7 +53,7 @@
 			</div>
 			<div id="noteSection" class="mt-8 hidden">
 				<label for="timeInput" class="block text-2xl mb-2">Ghi Chú:</label>
-				<div class="flex space-x-2 w-full">
+				<div class="flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-2 w-full">
 					<input type="text" id="timeInput" placeholder="00:00" class="block flex-grow bg-gray-700 text-white p-2 rounded transition-colors duration-200 ease-in-out focus:ring-2 focus:ring-pink-500" />
 					<button id="convertButton" class="bg-gray-600 hover:bg-gray-500 text-white py-2 px-4 rounded transition-colors duration-200 ease-in-out">Chuyển đổi</button>
 				</div>
@@ -61,5 +62,6 @@
 		</div>
 		<script type="module" src="script.js"></script>
 		<script type="module" src="videoLinks.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
 	</body>
 </html>
