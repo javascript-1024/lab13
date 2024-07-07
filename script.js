@@ -238,9 +238,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	convertButton.addEventListener("click", function () {
-		const [minutes, seconds] = timeInput.value.split(":").map(Number);
-		const totalSeconds = (minutes || 0) * 60 + (seconds || 0);
-		timeInSeconds.textContent = `Thời gian tính bằng giây: ${totalSeconds}`;
+		// const timeParts = timeInput.value.split(":").map(Number);
+		// let totalSeconds = 0;
+
+		// if (timeParts.length === 2) {
+		// 	// Đầu vào là phút:giây
+		// 	const [minutes, seconds] = timeParts;
+		// 	totalSeconds = minutes * 60 + seconds;
+		// } else if (timeParts.length === 3) {
+		// 	// Đầu vào là giờ:phút:giây
+		// 	const [hours, minutes, seconds] = timeParts;
+		// 	totalSeconds = hours * 3600 + minutes * 60 + seconds;
+		// } else {
+		// 	// Đầu vào không hợp lệ
+		// 	alert("Định dạng thời gian không hợp lệ. Vui lòng nhập lại.");
+		// 	return;
+		// }
+
+		// timeInSeconds.textContent = `Thời gian tính bằng giây: ${totalSeconds}`;
 		saveTimeInput();
 	});
 
